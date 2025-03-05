@@ -55,10 +55,10 @@ RUN chmod 700 /entrypoint.sh && chmod 700 /securityadmin.sh
 
 RUN chown 9255:9255 /*.sh
 
-COPY --from=builder --chown=9255:9255 /debian/wazuh-indexer/usr/share/wazuh-indexer /usr/share/wazuh-indexer
-COPY --from=builder --chown=0:0 /debian/wazuh-indexer/usr/lib/systemd /usr/lib/systemd
-COPY --from=builder --chown=0:0 /debian/wazuh-indexer/usr/lib/sysctl.d /usr/lib/sysctl.d
-COPY --from=builder --chown=0:0 /debian/wazuh-indexer/usr/lib/tmpfiles.d /usr/lib/tmpfiles.d
+COPY --from=builder --chown=9255:9255 /ubuntu/wazuh-indexer/usr/share/wazuh-indexer /usr/share/wazuh-indexer
+COPY --from=builder --chown=0:0 /ubuntu/wazuh-indexer/usr/lib/systemd /usr/lib/systemd
+COPY --from=builder --chown=0:0 /ubuntu/wazuh-indexer/usr/lib/sysctl.d /usr/lib/sysctl.d
+COPY --from=builder --chown=0:0 /ubuntu/wazuh-indexer/usr/lib/tmpfiles.d /usr/lib/tmpfiles.d
 
 RUN chown -R 9255:9255 /usr/share/wazuh-indexer
 
