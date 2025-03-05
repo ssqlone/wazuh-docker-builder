@@ -36,8 +36,8 @@ jobs:
           context: wazuh-dashboard/
           push: true
           tags: |
-            kalingth/wazuh-dashboard:${{ env.WAZUH_VERSION }}
-            kalingth/wazuh-dashboard:latest
+            ssqlone/wazuh-dashboard:${{ env.WAZUH_VERSION }}
+            ssqlone/wazuh-dashboard:latest
           platforms: |
             linux/arm64
           build-args: |
