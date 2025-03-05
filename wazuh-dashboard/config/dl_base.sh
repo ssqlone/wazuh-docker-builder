@@ -9,13 +9,13 @@ MINOR_CURRENT=$(echo $WAZUH_CURRENT_VERSION | cut -d. -f3)
 
 ## check version to use the correct repository
 if [ "$MAJOR_BUILD" -gt "$MAJOR_CURRENT" ]; then
-  REPOSITORY="packages-dev.wazuh.com/pre-release"
+  REPOSITORY="packages-dev.wazuh.com"
 elif [ "$MAJOR_BUILD" -eq "$MAJOR_CURRENT" ]; then
   if [ "$MID_BUILD" -gt "$MID_CURRENT" ]; then
-    REPOSITORY="packages-dev.wazuh.com/pre-release"
+    REPOSITORY="packages-dev.wazuh.com"
   elif [ "$MID_BUILD" -eq "$MID_CURRENT" ]; then
     if [ "$MINOR_BUILD" -gt "$MINOR_CURRENT" ]; then
-      REPOSITORY="packages-dev.wazuh.com/pre-release"
+      REPOSITORY="packages-dev.wazuh.com"
     fi
   fi
 fi
