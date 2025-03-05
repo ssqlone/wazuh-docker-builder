@@ -28,7 +28,7 @@ RUN bash config.sh
 # Copy wazuh-indexer from stage 0
 # Add entrypoint
 ################################################################################
-FROM debian:12
+FROM ubuntu:24.04
 
 ENV USER="wazuh-indexer" \
     GROUP="wazuh-indexer" \
