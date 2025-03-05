@@ -1,5 +1,5 @@
 # Wazuh Docker Copyright (C) 2017, Wazuh Inc. (License GPLv2)
-FROM ubuntu:24.04 AS builder
+FROM debian:12 AS builder
 
 ARG WAZUH_VERSION
 ARG WAZUH_TAG_REVISION
@@ -45,7 +45,7 @@ RUN mkdir -p $INSTALL_DIR/data/wazuh/logs && chown -R 9255:9255 $INSTALL_DIR/dat
 # Add entrypoint
 # Add wazuh_app_config
 ################################################################################
-FROM ubuntu:24.04
+FROM debian:12
 
 RUN apt update
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash
