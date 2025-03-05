@@ -3,7 +3,7 @@
 export DH_OPTIONS
 
 export NAME=wazuh-dashboard
-export TARGET_DIR=${CURDIR}/debian/${NAME}
+export TARGET_DIR=${CURDIR}/ubuntu/${NAME}
 export INSTALLATION_DIR=/usr/share/${NAME}
 export CONFIG_DIR=${INSTALLATION_DIR}/config
 
