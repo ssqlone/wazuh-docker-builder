@@ -36,10 +36,9 @@ jobs:
           context: wazuh-manager/
           push: true
           tags: |
-            kalingth/wazuh-manager:${{ env.WAZUH_VERSION }}
-            kalingth/wazuh-manager:latest
+            ssqlone/wazuh-manager:${{ env.WAZUH_VERSION }}
+            ssqlone/wazuh-manager:latest
           platforms: |
-            linux/amd64
             linux/arm64
           build-args: |
             WAZUH_VERSION=${{ env.WAZUH_VERSION }}
