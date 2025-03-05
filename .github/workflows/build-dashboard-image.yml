@@ -39,7 +39,6 @@ jobs:
             kalingth/wazuh-dashboard:${{ env.WAZUH_VERSION }}
             kalingth/wazuh-dashboard:latest
           platforms: |
-            linux/amd64
             linux/arm64
           build-args: |
             WAZUH_VERSION=${{ env.WAZUH_VERSION }}
