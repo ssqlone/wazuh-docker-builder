@@ -1,5 +1,5 @@
 # Wazuh Docker Copyright (C) 2017, Wazuh Inc. (License GPLv2)
-FROM ubuntu:24.04
+FROM debian:12
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
